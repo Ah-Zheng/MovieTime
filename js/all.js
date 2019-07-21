@@ -1,10 +1,18 @@
+let dateTime = new Date();
+showHowManyDay(dateTime, dateTime.getDay());
 
-$('#btn').click(function (e) {
+$('#inputDate').change(function (e) {
     e.preventDefault();
-    let jumpToDate = $('#inputDate').val();
-    let dateTime = new Date(jumpToDate);
-    showHowManyDay(dateTime, dateTime.getDay());
+    let jumpToDate = $(this).val();
+    if (jumpToDate != '') {
+        dateTime = new Date(jumpToDate);
+        showHowManyDay(dateTime, dateTime.getDay());
+    } else {
+        dateTime = new Date();
+        showHowManyDay(dateTime, dateTime.getDay());
+    }
 });
+
 // 判斷要顯示幾天
 function showHowManyDay(date, week) {
     switch (week) {
