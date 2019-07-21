@@ -1,7 +1,10 @@
-var dateTime = new Date('2019/7/30');
 
-showHowManyDay(dateTime, dateTime.getDay());
-
+$('#btn').click(function (e) {
+    e.preventDefault();
+    let jumpToDate = $('#inputDate').val();
+    let dateTime = new Date(jumpToDate);
+    showHowManyDay(dateTime, dateTime.getDay());
+});
 // 判斷要顯示幾天
 function showHowManyDay(date, week) {
     switch (week) {
@@ -38,7 +41,6 @@ function showDay(date, days) {
         let data = [date.getFullYear(), date.getMonth() + 1, date.getDate()];
         text += `<option value="">${data.join(' / ')} (${weekFormat(date.getDay())})</option>`;
     }
-    console.log(text);
     $('#dateOp').html(text);
 }
 
