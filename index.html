@@ -3,18 +3,38 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Time</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- 全省威秀影城隔週電影新場次公布於每週二晚間23:59 -->
     <!-- (假設週二整天只能查到：週二 週三 週四) -->
     <!-- 會開放未來一週(週三會查到：今天到下星期四)之場次 -->
-    日期測試 : <input type="date" id="inputDate">
-    <hr>
-    <select id="dateOp"></select>
+    <div class="container">
+        <header class="my-3">
+            <div class="input-group mx-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">日期測試</span>
+                </div>
+                <input type="date" class="form-control" id="inputDate">
+            </div>
+        </header>
+        <section>
+            <div class="input-group mx-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">選擇日期</span>
+                </div>
+                <select class="form-control" id="dateOp"></select>
+            </div>
+            <div class="showMovie"></div>
+        </section>
+    </div>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/all.js"></script>
 </body>
 
