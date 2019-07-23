@@ -1,5 +1,7 @@
 let dateTime = new Date();
-getMovieTime(dateTime, dateTime.getDay());
+let weekArray = ['日', '一', '二', '三', '四', '五', '六']; // 星期轉中文
+let days = [2, 1, 2, 6, 5, 4, 3]; // 顯示天數
+showDay(dateTime, days[dateTime.getDay()]);
 
 // 測試日期選項
 $('#inputDate').change(function (e) {
@@ -7,10 +9,10 @@ $('#inputDate').change(function (e) {
     let jumpToDate = $(this).val();
     if (jumpToDate != '') {
         dateTime = new Date(jumpToDate);
-        getMovieTime(dateTime, dateTime.getDay());
+        showDay(dateTime, days[dateTime.getDay()]);
     } else {
         dateTime = new Date();
-        getMovieTime(dateTime, dateTime.getDay());
+        showDay(dateTime, days[dateTime.getDay()]);
     }
 });
 
@@ -25,75 +27,17 @@ $('#dateOp').change(function (e) {
     }
 });
 
-// 判斷要顯示幾天
-function getMovieTime(date, week) {
-    let days;
-    switch (week) {
-        case 1:
-            days = 1;
-            break;
-        case 2:
-            days = 2;
-            break;
-        case 3:
-            days = 6;
-            break;
-        case 4:
-            days = 5;
-            break;
-        case 5:
-            days = 4;
-            break;
-        case 6:
-            days = 3;
-            break;
-        case 0:
-            days = 2;
-            break;
-    }
-    showDay(date, days);
-}
-
 // 將電影日期秀出來
 function showDay(date, days) {
     let todatData = [date.getFullYear(), date.getMonth() + 1, date.getDate()];
     let text = '<option value="">-起選擇日期-</option>';
-    text += `<option value="${date.getDay()}">${todatData.join(' / ')} (${weekFormat(date.getDay())})</option>`;
+    text += `<option value="${date.getDay()}">${todatData.join(' / ')} (${weekArray[date.getDay()]})</option>`;
     for (let i = 0; i < days; i++) {
         date.setDate(date.getDate() + 1);
         let data = [date.getFullYear(), date.getMonth() + 1, date.getDate()];
-        text += `<option value="${date.getDay()}">${data.join(' / ')} (${weekFormat(date.getDay())})</option>`;
+        text += `<option value="${date.getDay()}">${data.join(' / ')} (${weekArray[date.getDay()]})</option>`;
     }
     $('#dateOp').html(text);
-}
-
-// 將星期改成國字
-function weekFormat(week) {
-    let weekZh = '';
-    switch (week) {
-        case 1:
-            weekZh = '一';
-            break;
-        case 2:
-            weekZh = '二';
-            break;
-        case 3:
-            weekZh = '三';
-            break;
-        case 4:
-            weekZh = '四';
-            break;
-        case 5:
-            weekZh = '五';
-            break;
-        case 6:
-            weekZh = '六';
-            break;
-        case 0:
-            weekZh = '日';
-            break;
-    }
-    return weekZh;
 }
 
 // 取得電影資料
