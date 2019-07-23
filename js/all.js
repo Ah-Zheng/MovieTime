@@ -48,10 +48,10 @@ function getMovieTime(date, week) {
             days = 3;
             break;
         case 0:
-            days = 3;
+            days = 2;
             break;
     }
-    showDay(date, days)
+    showDay(date, days);
 }
 
 // 將電影日期秀出來
