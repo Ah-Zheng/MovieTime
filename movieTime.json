@@ -1,0 +1,93 @@
+[
+    {
+        "movieId": 0,
+        "movieName": "玩命關頭8",
+        "movieUpDate": "2017 / 4 / 14",
+        "movieLength": "2 小時 29 分鐘",
+        "movieDay": 1,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/Fast&Furious8.jpg"
+    },
+    {
+        "movieId": 1,
+        "movieName": "復仇者聯盟4",
+        "movieUpDate": "2019 / 4 / 24",
+        "movieLength": "3 小時 2 分鐘",
+        "movieDay": 2,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/Avengers_Endgame.jpg"
+    },
+    {
+        "movieId": 2,
+        "movieName": "蜘蛛人 : 離家日",
+        "movieUpDate": "2019 / 6 / 28",
+        "movieLength": "2 小時 9 分鐘",
+        "movieDay": 3,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/SpiderMan_FarFromHome.jpg"
+    },
+    {
+        "movieId": 3,
+        "movieName": "獅子王",
+        "movieUpDate": "2019 / 7 / 17",
+        "movieLength": "1 小時 58 分鐘",
+        "movieDay": 4,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/TheLionKing.jpg"
+    },
+    {
+        "movieId": 4,
+        "movieName": "玩具總動員4",
+        "movieUpDate": "2019 / 6 / 20",
+        "movieLength": "1 小時 40 分鐘",
+        "movieDay": 5,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/ToyStory4.jpg"
+    },
+    {
+        "movieId": 5,
+        "movieName": "MIB星際戰警 ： 跨國行動",
+        "movieUpDate": "2019 / 6 / 12",
+        "movieLength": "1 小時 55 分鐘",
+        "movieDay": 6,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/MIB.jpg"
+    },
+    {
+        "movieId": 6,
+        "movieName": "阿拉丁",
+        "movieUpDate": "2019 / 5 / 8",
+        "movieLength": "2 小時 10 分鐘",
+        "movieDay": 0,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/Aladdin.jpg"
+    }
+]
