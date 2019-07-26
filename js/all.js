@@ -1,6 +1,6 @@
 let dateTime = new Date();
 let weekArray = ['日', '一', '二', '三', '四', '五', '六']; // 星期轉中文
-let days = [2, 1, 2, 6, 5, 4, 3]; // 顯示天數
+let days = [2, 1, 0, 6, 5, 4, 3]; // 顯示天數
 showDay(dateTime, days[dateTime.getDay()]);
 
 // 測試日期選項
