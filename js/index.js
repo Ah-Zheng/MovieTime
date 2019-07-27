@@ -54,7 +54,7 @@ function showMovieOp(theaterIndex) {
 // 日期選項
 function showDateOp(date, days) {
     let todayData = [date.getFullYear(), date.getMonth() + 1, date.getDate()];
-    let text = '<option value="">-起選擇日期-</option>';
+    let text = '<option value="">-請選擇日期-</option>';
     text += `<option value="${date.getDay()}">${todayData.join(' / ')} (${weekZh[date.getDay()]})</option>`;
     for (let i = 0; i < days; i++) {
         date.setDate(date.getDate() + 1);
