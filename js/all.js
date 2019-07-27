@@ -48,18 +48,23 @@ function getMovie(week) {
         dataType: "JSON",
         success: function (response) {
             let movie = response.filter(res => res.movieDay == week);
-            let text = '<div class="col-4">';
+            let text = '';
             for (let i = 0; i < movie.length; i++) {
-                text += '<div class="card text-center">';
-                text += `<div class="card-header"><span class="h3">${movie[i].movieName}</span></div>`;
-                text += '<div class="card-body">';
-                text += `<p><img src="${movie[0].movieImg}" width="200px"></p>`;
-                text += `<p>片長 : ${movie[0].movieLength}</p>`;
-                text += `<p>上映日期 : ${movie[0].movieUpDate}</p>`;
-                text += '</div></div>';
+                text += `
+                <div class="card text-center">
+                    <div class="card-header">
+                        <span class="h3">${movie[i].movieName}</span>
+                    </div>
+                    <div class="card-body">
+                        <p><img src="${movie[0].movieImg}"></p>
+                        <p>片長 : ${movie[0].movieLength}</p>
+                        <p>上映日期 : ${movie[0].movieUpDate}</p>
+                    </div>
+                </div>
+                `;
             }
             text += '</div>';
-            $('aside>.row').html(text);
+            $('aside>.row>.col-12').html(text);
         }
     });
 }
