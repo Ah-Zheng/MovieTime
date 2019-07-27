@@ -27,7 +27,7 @@ $('#dateOp').change(function (e) {
     }
 });
 
-// 將電影日期秀出來
+// 將日期秀出來
 function showDay(date, days) {
     let todatData = [date.getFullYear(), date.getMonth() + 1, date.getDate()];
     let text = '<option value="">-起選擇日期-</option>';
