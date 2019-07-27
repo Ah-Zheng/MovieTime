@@ -51,20 +51,21 @@ function getMovie(week) {
             let text = '';
             for (let i = 0; i < movie.length; i++) {
                 text += `
-                <div class="card text-center">
-                    <div class="card-header">
-                        <span class="h3">${movie[i].movieName}</span>
-                    </div>
-                    <div class="card-body">
-                        <p><img src="${movie[0].movieImg}"></p>
-                        <p>片長 : ${movie[0].movieLength}</p>
-                        <p>上映日期 : ${movie[0].movieUpDate}</p>
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <span class="h4">${movie[i].movieName}</span>
+                        </div>
+                        <div class="card-body">
+                            <p><img src="${movie[i].movieImg}"></p>
+                            <p>片長 : ${movie[i].movieLength}</p>
+                            <p>上映日期 : ${movie[i].movieUpDate}</p>
+                        </div>
                     </div>
                 </div>
                 `;
             }
-            text += '</div>';
-            $('aside>.row>.col-12').html(text);
+            $('aside>.row').html(text);
         }
     });
 }

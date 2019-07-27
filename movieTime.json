@@ -4,7 +4,7 @@
         "movieName": "玩命關頭8",
         "movieUpDate": "2017 / 4 / 14",
         "movieLength": "2 小時 29 分鐘",
-        "movieDay": 1,
+        "movieDay": ["0", "1", "2"],
         "movieTime": [
             "10:00",
             "11:40",
@@ -89,5 +89,45 @@
             "13:20"
         ],
         "movieImg" : "img/Aladdin.jpg"
+    },
+    {
+        "movieId": 7,
+        "movieName": "火影忍者劇場版 ： 大激突！幻之地底遺蹟",
+        "movieUpDate": "2005 / 8 / 6",
+        "movieLength": "1 小時 37 分鐘",
+        "movieDay": 1,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/naruto01.jpg"
+    },
+    {
+        "movieId": 8,
+        "movieName": "火影忍者劇場版 ： 失落之塔",
+        "movieUpDate": "2010 / 7 / 31",
+        "movieLength": "1 小時 25 分鐘",
+        "movieDay": 6,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/naruto02.jpg"
+    },
+    {
+        "movieId": 9,
+        "movieName": "火影忍者劇場版 ： 血獄",
+        "movieUpDate": "2011 / 7 / 30",
+        "movieLength": "1 小時 25 分鐘",
+        "movieDay": 6,
+        "movieTime": [
+            "10:00",
+            "11:40",
+            "13:20"
+        ],
+        "movieImg" : "img/naruto03.jpg"
     }
+    
 ]
