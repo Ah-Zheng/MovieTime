@@ -7,6 +7,8 @@
     <title>Movie Time</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,7 +17,7 @@
     <!-- 會開放未來一週(週三會查到：今天到下星期四)之場次 -->
     <div class="container">
         <header class="my-3">
-            <div class="input-group mx-auto" style="width: 40%;">
+            <div class="input-group mx-auto" style="width: 50%;">
                 <div class="input-group-prepend">
                     <span class="input-group-text">日期測試</span>
                 </div>
@@ -23,22 +25,62 @@
             </div>
         </header>
         <section>
-            <div class="input-group mx-auto">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">選擇日期</span>
+            <div class="card w-75 mx-auto bg-primary">
+                <div class="card-body">
+                    <ul class="nav nav-tabs nav-fill mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">快速訂票</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">快搜空位</a>
+                        </li>
+                    </ul>
+                    <div class="input-group mx-auto mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                &nbsp;<i class="fa fa-map-marker"></i>&nbsp;
+                            </span>
+                        </div>
+                        <select class="form-control" id="theaterOp">
+                            <option value="">-請選擇戲院-</option>
+                        </select>
+                    </div>
+                    <div class="input-group mx-auto mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-video-camera"></i>
+                            </span>
+                        </div>
+                        <select class="form-control" id="movieOp">
+                            <option value="">-請選擇電影-</option>
+                        </select>
+                    </div>
+                    <div class="input-group mx-auto mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-calendar"></i>
+                            </span>
+                        </div>
+                        <select class="form-control" id="dateOp">
+                            <option value="">-請選擇日期-</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-info text-light mr-3 w-25">前往訂票</button>
+                        <button class="btn btn-info text-light w-25 ml-3">查看座位</button>
+                    </div>
                 </div>
-                <select class="form-control" id="dateOp"></select>
             </div>
         </section>
         <hr>
         <aside>
-            <div class="row"></div>
+            <div class="show"></div>
         </aside>
     </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/all.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,32 @@
 .input-group {
-    width: 40%;
+    width: 100%;
 }
 
 .h4 {
     word-wrap: break-word;
 }
 
-img {
-    width: 100%;
+select {
+    text-align: center;
+    text-align-last:center;
+}
+
+select option {
+    text-align-last:center;
+}
+
+.nav {
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+}
+
+.nav-item:hover {
+    border-bottom: 1px solid white;
+}
+
+.card {
+    border-radius: 20px;
 }
