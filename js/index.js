@@ -42,7 +42,7 @@ function showMovieOp(theaterIndex) {
         dataType: "JSON",
         success: function (response) {
             let movieAr = response.filter(res => res.theater == theaterIndex);
-            let text = '<option value="">-請選擇戲院-</option>';
+            let text = '<option value="">-請選擇電影-</option>';
             for (let i = 0; i < movieAr[0].movieList.length; i++) {
                 text += `<option value="${movieAr[0].movieList[i]}">${movieAr[0].movieList[i]}</option>`;
             }
