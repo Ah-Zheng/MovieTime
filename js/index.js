@@ -22,6 +22,8 @@ $('#theaterOp').change(function (e) {
     e.preventDefault();
     if ($(this).val() != '') {
         showMovieOp($(this).val());
+    } else {
+        showMovieOp($(this).val());
     }
 });
 
@@ -41,12 +43,16 @@ function showMovieOp(theaterIndex) {
         url: "data.json",
         dataType: "JSON",
         success: function (response) {
-            let movieAr = response.filter(res => res.theater == theaterIndex);
             let text = '<option value="">-請選擇電影-</option>';
+            if (theaterIndex != '') {
+            let movieAr = response.filter(res => res.theater == theaterIndex);
             for (let i = 0; i < movieAr[0].movieList.length; i++) {
                 text += `<option value="${movieAr[0].movieList[i]}">${movieAr[0].movieList[i]}</option>`;
             }
-            $('#movieOp').html(text);
+                $('#movieOp').html(text);
+            } else {
+                $('#movieOp').html(text);
+            }
         }
     });
 }
